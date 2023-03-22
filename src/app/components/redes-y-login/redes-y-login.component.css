@@ -1,0 +1,66 @@
+@media (max-width: 465px) {
+    .logoAP {
+        max-width: 100%;
+    }
+
+    /* TODO hamburguesa boton */
+    .logoRedes {
+        width: 30px;
+    }
+}
+
+@media (min-width: 466px) {
+    .logoAP {
+        max-width: 100%;
+    }
+
+    .logoRedes {
+        width: 50px;
+    }
+}
+
+@media (min-width: 601px) {
+    .logoAP {
+        max-width: 100%;
+    }
+
+    .logoRedes {
+        width: 70px;
+    }
+}
+
+@media (min-width: 896px) {
+    .logoAP {
+        width: 359px;
+    }
+}
+
+.divRedes {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.btn {
+    transform: translate(0);
+    overflow: hidden;
+    cursor: pointer;
+    border-width: medium;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    width: 8px;
+    top: 0;
+    bottom: 0;
+    left: -32px;
+    transform: rotate(-16 deg);
+    filter: blur(6px);
+}
+
+.btn:hover::before {
+    left: calc(100% + 32px);
+    transition: 0.75s;
+}

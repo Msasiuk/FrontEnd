@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="h2">
+    <h2>Proyectos</h2>
+
+    <button
+      type="button"
+      class="btn btn-dark"
+      routerLink="/newp"
+      *ngIf="isLogged"
+    >
+      <i class="bi bi-plus-square"></i>
+    </button>
+  </div>
+
+  <div class="grid" *ngFor="let proyecto of proyectoList">
+    <div *ngIf="proyecto">
+      <img
+        id="imagen"
+        src="{{ proyecto.imgP }}"
+        alt="Logo de institucion"
+        max-width="100px"
+      />
+    </div>
+    <div class="divTexto">
+      <h3>{{ proyecto.nombreP }}</h3>
+      <p>{{ proyecto.fechaP }}</p>
+      <p>{{ proyecto.descripcionP }}</p>
+      <a
+        href="{{ proyecto.linkP }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        >{{ proyecto.linkP }}</a
+      >
+    </div>
+    <div *ngIf="isLogged" class="divTexto">
+      <button class="btn btn-light" routerLink="/editp/{{ proyecto.id }}">
+        <i class="bi bi-pencil-fill"></i>
+      </button>
+      <button class="btn btn-danger" (click)="delete(proyecto.id)">
+        <i class="bi bi-trash-fill"></i>
+      </button>
+    </div>
+  </div>
+</div>

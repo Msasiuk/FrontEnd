@@ -1,0 +1,34 @@
+<div class="h2">
+  <h2>Hard Skills</h2>
+
+  <button
+    type="button"
+    class="btn btn-dark"
+    routerLink="/newhdskill"
+    *ngIf="isLogged"
+  >
+    <i class="bi bi-plus-square"></i>
+  </button>
+</div>
+
+<div class="grid">
+  <div *ngFor="let hardSkill of hardSkillList">
+    <circle-progress
+      [percent]="hardSkill.porcentajeHd"
+      [title]="hardSkill.nombreHd"
+      [titleFontSize]="'30px'"
+    >
+    </circle-progress>
+    <div class="divBtn" *ngIf="isLogged">
+      <button
+        class="btn btn-light"
+        routerLink="/edithdskill/{{ hardSkill.id }}"
+      >
+        <i class="bi bi-pencil-fill"></i>
+      </button>
+      <button class="btn btn-danger" (click)="delete(hardSkill.id)">
+        <i class="bi bi-trash-fill"></i>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<div class="gradient-custom">
+  <div class="container">
+    <h2 class="fw-bold mb-2">- CREAR -</h2>
+    <p>Para finalizar haga click sobre el botón</p>
+    <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+      <div class="form-group">
+        <label for="empresaEx">Nombre de la empresa</label>
+        <input
+          type="text"
+          class="form-control"
+          id="empresaEx"
+          name="empresaEx"
+          [(ngModel)]="empresaEx"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="tituloEx">Puesto de trabajo</label>
+        <input
+          type="text"
+          class="form-control"
+          id="tituloEx"
+          name="tituloEx"
+          [(ngModel)]="tituloEx"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="descripcionEx">Descripción del trabajo realizado</label>
+        <input
+          type="text"
+          class="form-control"
+          id="descripcionEx"
+          name="descripcionEx"
+          [(ngModel)]="descripcionEx"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="fechaInicioEx">Fecha de inicio</label>
+        <input
+          type="number"
+          class="form-control"
+          id="fechaInicioEx"
+          name="fechaInicioEx"
+          [(ngModel)]="fechaInicioEx"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="fechaFinEx">Fecha de finalización</label>
+        <input
+          type="number"
+          class="form-control"
+          id="fechaFinEx"
+          name="fechaFinEx"
+          [(ngModel)]="fechaFinEx"
+          required
+        />
+      </div>
+      <button class="btn btn-dark">Agregar</button>
+    </form>
+  </div>
+</div>

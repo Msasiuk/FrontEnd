@@ -1,0 +1,71 @@
+img {
+    border-radius: 100%;
+    margin-top: -50%;
+    /*box-shadow : eje x, eje y, difuminado*/
+    box-shadow: 5px 5px 50px black;
+    width: 100%;
+}
+
+@media (max-width: 576px) {
+    img {
+        /*TODO averiguar achicar imagen*/
+        margin-top: -13%;
+        margin-left: 40%;
+        width: 25%;
+    }
+}
+
+#nombre {
+    font-weight: bold;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+#titulo {
+    color: #ffffff;
+}
+
+h2,
+#nombre,
+#titulo {
+    text-align: center;
+}
+
+div {
+    overflow: visible;
+}
+
+.div {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+h1 {
+    display: inline;
+    padding: 20px;
+}
+
+.btn {
+    transform: translate(0);
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    width: 8px;
+    top: 0;
+    bottom: 0;
+    left: -32px;
+    transform: rotate(-16 deg);
+    filter: blur(6px);
+}
+
+.btn:hover::before {
+    left: calc(100% + 32px);
+    transition: 0.75s;
+}

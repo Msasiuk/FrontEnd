@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="h2">
+    <h2>Experiencia laboral</h2>
+
+    <button
+      type="button"
+      class="btn btn-dark"
+      routerLink="/newex"
+      *ngIf="isLogged"
+    >
+      <i class="bi bi-plus-square"></i>
+    </button>
+  </div>
+  <div class="grid" *ngFor="let experiencia of experienciaList">
+    <div *ngIf="experiencia" class="divImg">
+      <img
+        id="imagen"
+        src="{{ experiencia.imgEmpresaEx }}"
+        alt="Logo de empresa"
+        max-width="100px"
+      />
+    </div>
+    <div class="divTexto">
+      <h3>{{ experiencia.empresaEx }}</h3>
+      <p>{{ experiencia.tituloEx }}</p>
+      <p>{{ experiencia.fechaInicioEx }} - {{ experiencia.fechaFinEx }}</p>
+      <p>{{ experiencia.descripcionEx }}</p>
+    </div>
+    <div *ngIf="isLogged" class="divTexto">
+      <button class="btn btn-light" routerLink="/editex/{{ experiencia.id }}">
+        <i class="bi bi-pencil-fill"></i>
+      </button>
+      <button class="btn btn-danger" (click)="delete(experiencia.id)">
+        <i class="bi bi-trash-fill"></i>
+      </button>
+    </div>
+  </div>
+</div>

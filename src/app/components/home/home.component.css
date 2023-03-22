@@ -1,0 +1,37 @@
+div {
+    /* COLORES NARANJAS: 
+    FUERTE #FF7F50
+    DEBIL #E6A577
+    
+    AZULES: 
+    FUERTE #0a7686
+    DEBIL #66B9BF
+
+    BLANCO #F0F8FF
+
+    COLORES*/
+
+    /* background-color: #66B9BF;
+    color: #0a7686; */
+
+    background: rgb(10, 118, 134);
+    background: linear-gradient(320deg,
+            rgba(10, 118, 134, 1) 0%,
+            rgba(102, 185, 191, 1) 20%,
+            rgba(102, 185, 191, 1) 80%,
+            rgba(10, 118, 134, 1) 100%);
+}
+
+/* ::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FF7F50;
+    border-radius: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #E6A577;
+    border-radius: 16px;
+} */

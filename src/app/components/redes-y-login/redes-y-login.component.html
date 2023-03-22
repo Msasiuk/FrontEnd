@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-5 divLogo">
+    <a
+      href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa"
+      target="_blank"
+      rel="noopener noreferrer"
+      ><img
+        class="logoAP"
+        src="../../../assets/logoAPrograma.png"
+        alt="Logo de Argentina Programa"
+    /></a>
+  </div>
+  <div class="col-7 divRedes">
+    <a
+      href="https://www.linkedin.com/in/gabriela-maza-sasiuk"
+      target="_blank"
+      rel="noopener noreferrer"
+      ><img class="logoRedes" src="../../../assets/linkedin.svg" alt="linkedin"
+    /></a>
+    <a href="https://walink.co/ca78ef" target="_blank" rel="noopener noreferrer"
+      ><img class="logoRedes" src="../../../assets/whatsapp.svg" alt="whatsapp"
+    /></a>
+    <a
+      href="https://discord.gg?VGGsBnq8"
+      target="_blank"
+      rel="noopener noreferrer"
+      ><img class="logoRedes" src="../../../assets/discord.svg" alt="discord"
+    /></a>
+    <a href="https://t.me/AbyMsasiuk" target="_blank" rel="noopener noreferrer"
+      ><img class="logoRedes" src="../../../assets/telegram.svg" alt="telegram"
+    /></a>
+    <button
+      type="button"
+      class="btn btn-outline-light"
+      (click)="login()"
+      *ngIf="!isLogged"
+    >
+      INGRESO
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-light"
+      (click)="onLogOut()"
+      *ngIf="isLogged"
+    >
+      CERRAR SESION
+    </button>
+  </div>
+</div>
